@@ -6,11 +6,24 @@ require 'directors_database'
 # { directorOne => allTheMoneyTheyMade, ... }
 
 def directors_totals(nds)
+  
   result = {}
-  nil
+  
+  nds.each { |director, value| 
+    total = gross_for_director(director)
+    result[director[:name]]= total
+  }
+  result
 end
 
 # Find a way to accumulate the :worldwide_grosses and return that Integer
 # using director_data as input
 def gross_for_director(director_data)
+  total = 0
+  
+  director_data[:movies].each { |movie_info|
+    total += movie_info[:worldwide_gross]
+  }
+  
+  total
 end

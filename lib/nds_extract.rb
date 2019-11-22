@@ -13,7 +13,7 @@ def directors_totals(nds)
     total = gross_for_director(director)
     result = {director[:name] => total}
   }
-  
+   pp result
   result
 end
 

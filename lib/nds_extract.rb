@@ -15,7 +15,7 @@ def directors_totals(nds)
     pp result
   #  puts director[:name]
 #    puts total
-#    puts
+    puts
   }
   # pp result
   result

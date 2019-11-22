@@ -12,11 +12,11 @@ def directors_totals(nds)
   nds.each { |director, value| 
     total = gross_for_director(director)
     result = {director[:name] => total}
- #   puts director[:name]
+    puts director[:name]
 #    puts total
 #    puts
   }
-   pp result
+  # pp result
   result
 end
 

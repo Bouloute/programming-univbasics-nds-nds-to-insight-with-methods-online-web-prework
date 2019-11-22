@@ -12,8 +12,11 @@ def directors_totals(nds)
   nds.each { |director, value| 
     total = gross_for_director(director)
     result = {director[:name] => total}
+    puts director_data[:name]
+    puts total
+    puts
   }
-   pp result
+  # pp result
   result
 end
 
@@ -25,8 +28,6 @@ def gross_for_director(director_data)
   director_data[:movies].each { |movie_info|
     total += movie_info[:worldwide_gross]
   }
-  puts director_data[:name]
-  puts total
-  puts
+  
   total
 end
